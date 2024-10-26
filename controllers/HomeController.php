@@ -1,9 +1,12 @@
 <?php
 
-class HomeController
+class HomeController extends RenderView
 {
     public function index()
     {
-        echo "Home Controller";
+        $this->loadView('home', [
+            'title' => 'Home Page',
+            'user' => 'Felipe Macedo'
+        ]);
     }
 }
