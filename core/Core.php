@@ -8,6 +8,8 @@ class Core
 
         isset($_GET['url']) ? $url .= $_GET['url'] : '';
 
+        ($url != '/') ? $url = rtrim($url, '/') : $url;
+
         $routerFound = false;
 
         foreach($routes as $path => $controller)
