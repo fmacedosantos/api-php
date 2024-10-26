@@ -21,4 +21,11 @@ class UserModel extends Database
             return [];
         }
     }
+
+    public function fetchById($id)
+    {
+        $stm = $this->pdo->prepare("SELECT * FROM users WHERE id = ?");
+        $stm->execute([$id]);
+        return $stm->fetch(PDO::FETCH_ASSOC);
+    }
 }
