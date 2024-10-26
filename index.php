@@ -19,3 +19,5 @@ spl_autoload_register(function($file)
 
 $core = new Core();
 $core->run($routes);
+
+// link do tutorial: https://youtu.be/jamKWbvmerQ
